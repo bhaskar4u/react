@@ -1,0 +1,61 @@
+'use strict';
+
+console.log('App is runing');
+
+var user = {
+    userName: 'bhaskar',
+    age: 10,
+    mail: 'bhaskarsahni80@gmail.com'
+};
+
+var detail = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        'userName:-',
+        getName(user.userName ? user.userName : 'NA')
+    ),
+    user.age >= 10 && React.createElement(
+        'h1',
+        null,
+        'Age:-',
+        user.age
+    ),
+    React.createElement(
+        'h1',
+        null,
+        'Email:-',
+        user.mail
+    )
+);
+
+function getName(userName) {
+    if (userName) {
+        return userName;
+    }
+};
+
+var appRoot = document.getElementById('app');
+ReactDOM.render(detail, appRoot);
+'use strict';
+
+console.log('App is runing');
+
+var user = {
+    userName: 'bhaskar',
+    contact: 10,
+    mail: 'bhaskarsahni80@gmail.com'
+};
+
+var detail = React.createElement('div', null, React.createElement('h1', null, 'userName:-', getName(user.userName ? user.userName : 'NA')), user.contact >= 10 && React.createElement('h1', null, 'contact:-', user.contact), React.createElement('h1', null, 'Email:-', user.mail));
+
+function getName(userName) {
+    if (userName) {
+        return userName;
+    }
+};
+
+var appRoot = document.getElementById('app');
+ReactDOM.render(detail, appRoot);
